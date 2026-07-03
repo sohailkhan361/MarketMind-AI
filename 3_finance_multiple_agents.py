@@ -1,10 +1,11 @@
 from agno.agent import Agent
 from agno.team import Team
-# from agno.models.openai import OpenAIChat
 from agno.models.groq import Groq
 from agno.tools.duckduckgo import DuckDuckGoTools
 from agno.tools.yfinance import YFinanceTools
 from dotenv import load_dotenv
+
+from config import LLAMA_MODEL_ID
 
 load_dotenv()
 
@@ -36,7 +37,7 @@ def get_company_symbol(company: str) -> str:
 
 web_search_agent = Agent(
     name="Web Search Agent",
-    model=Groq(id="llama-3.3-70b-versatile"),
+    model=Groq(id=LLAMA_MODEL_ID),
     tools=[
         DuckDuckGoTools(fixed_max_results=3, enable_search=True, enable_news=True),
     ],
@@ -50,7 +51,7 @@ web_search_agent = Agent(
 finance_analyst_agent = Agent(
     name="Finance Analyst Agent",
     role="Get Financial Data and Analyst Recommendations",
-    model=Groq(id="llama-3.3-70b-versatile"),
+    model=Groq(id=LLAMA_MODEL_ID),
     tools=[
         YFinanceTools(
             enable_stock_price=True,
@@ -74,6 +75,7 @@ agents_team = Team(
     instructions=[
         "Always include sources.", "Use tables to display data.",
     ],
+    model=Groq(id=LLAMA_MODEL_ID),
     debug_mode=True,
     markdown=True
 )

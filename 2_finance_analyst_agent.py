@@ -3,6 +3,8 @@ from agno.models.groq import Groq
 from agno.tools.yfinance import YFinanceTools
 from dotenv import load_dotenv
 
+from config import LLAMA_MODEL_ID
+
 load_dotenv()
 
 def get_company_symbol(company: str) -> str:
@@ -32,7 +34,7 @@ def get_company_symbol(company: str) -> str:
     return symbols.get(company, "Unknown")
 
 agent = Agent(
-    model=Groq(id="llama-3.3-70b-versatile"),
+    model=Groq(id=LLAMA_MODEL_ID),
     tools=[
         YFinanceTools(
             enable_stock_price=True,
