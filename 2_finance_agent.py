@@ -1,0 +1,55 @@
+from agno.agent import Agent
+from agno.models.groq import Groq
+from agno.tools.yfinance import YFinanceTools
+from dotenv import load_dotenv
+
+load_dotenv()
+
+def get_company_symbol(company: str) -> str:
+    """Use this function to get the symbol for a company.
+
+    Args:
+        company (str): The name of the company.
+
+    Returns:
+        str: The symbol for the company.
+    """
+    symbols = {
+        "Accenture": "ACN",
+        "IBM": "IBM",
+        "Wipro": "WIT",
+        "HCL": "HCLTECH",
+        "NVIDIA": "NVDA",
+        "Cognizant": "CTSH",
+        "TCS": "TCS",
+        "Infosys": "INFY",
+        "Tesla": "TSLA",
+        "Apple": "AAPL",
+        "Microsoft": "MSFT",
+        "Amazon": "AMZN",
+        "Google": "GOOGL",
+    }
+    return symbols.get(company, "Unknown")
+
+agent = Agent(
+    model=Groq(id="llama-3.3-70b-versatile"),
+    tools=[
+        YFinanceTools(
+            enable_stock_price=True,
+            enable_analyst_recommendations=True,
+            enable_stock_fundamentals=True,
+        ),
+        get_company_symbol,
+    ],
+    markdown=True,
+    debug_mode=True,
+    instructions=[
+        "You are an expert financial analyst.",
+        "Use the get_company_symbol tool to get the symbol for any company, even if it is not a public company.",
+        "Use tables to display data.",
+    ],
+)
+
+agent.print_response(
+    "Summarize and compare analyst recommendations and fundamentals for TSLA and NVDA. Show in tables.", stream=True
+)

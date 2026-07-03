@@ -35,3 +35,6 @@ EOF
 git status
 ```
 
+To Start with Finance Agents:
+> pip install yfinance
+> 
