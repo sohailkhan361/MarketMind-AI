@@ -1,7 +1,7 @@
 To Start:
 > virtualenv .venv
 > source .venv/bin/activate
-> pip install -U agno
+> pip install -U agno openai
 > pip install dotenv
 > pip install groq
 
@@ -37,4 +37,6 @@ git status
 
 To Start with Finance Agents:
 > pip install yfinance
-> 
+
+To install DuckDuckGo, run the following command:
+> pip install -U ddgs 
