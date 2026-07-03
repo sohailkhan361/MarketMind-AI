@@ -137,11 +137,19 @@ This script creates a team of two agents:
 Together, they provide a more complete research workflow.
 
 
-### To run FastAPI 
+### Run your service using FastAPI
 ```bash
 fastapi dev workbench.py
 ```
 
+Your AgentOS will be running at http://localhost:8000.
+Open http://localhost:8000/docs to view the API docs.
+
+
+AgentOS also comes with a UI, available at: os.agno.com. It connects directly from your browser to the running API. Use it to test, monitor, and manage your agents in real time.
+Open os.agno.com and sign in.
+Click “Connect OS”
+Select “Local”, enter your endpoint URL (default: http://localhost:8000), name it “Local AgentOS”, and click “Connect”.
 
 ## Module Details
 
@@ -228,4 +236,8 @@ The screenshots below are ordered by capture time from oldest to newest.
 ![Screenshot 12](assets/Screenshot%202026-07-03%20at%2011.38.35%E2%80%AFPM.png)
 
 ![Screenshot 13](assets/Screenshot%202026-07-03%20at%2011.38.43%E2%80%AFPM.png)
+
+![Screenshot 14](assets/Screenshot%202026-07-03%20at%2011.57.50%E2%80%AFPM.png)
+
+![Screenshot 15](assets/Screenshot%202026-07-04%20at%2012.14.02%E2%80%AFAM.png)
 
