@@ -77,6 +77,7 @@ pip install python-dotenv
 pip install groq
 pip install yfinance
 pip install -U ddgs
+pip install -U 'agno[os]'
 ```
 
 ### 3. Configure environment variables
@@ -134,6 +135,13 @@ This script creates a team of two agents:
 - and a Finance Analyst Agent for retrieving financial data.
 
 Together, they provide a more complete research workflow.
+
+
+### To run FastAPI 
+```bash
+fastapi dev workbench.py
+```
+
 
 ## Module Details
 
