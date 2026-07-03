@@ -191,3 +191,33 @@ __pycache__/
 .DS_Store
 ```
 
+## Screenshots
+
+The screenshots below are ordered by capture time from oldest to newest.
+
+![Screenshot 1](assets/Screenshot%202026-07-03%20at%2011.05.56%E2%80%AFPM.png)
+
+![Screenshot 2](assets/Screenshot%202026-07-03%20at%2011.06.05%E2%80%AFPM.png)
+
+![Screenshot 3](assets/Screenshot%202026-07-03%20at%2011.06.17%E2%80%AFPM.png)
+
+![Screenshot 4](assets/Screenshot%202026-07-03%20at%2011.37.24%E2%80%AFPM.png)
+
+![Screenshot 5](assets/Screenshot%202026-07-03%20at%2011.37.33%E2%80%AFPM.png)
+
+![Screenshot 6](assets/Screenshot%202026-07-03%20at%2011.37.45%E2%80%AFPM.png)
+
+![Screenshot 7](assets/Screenshot%202026-07-03%20at%2011.37.54%E2%80%AFPM.png)
+
+![Screenshot 8](assets/Screenshot%202026-07-03%20at%2011.38.01%E2%80%AFPM.png)
+
+![Screenshot 9](assets/Screenshot%202026-07-03%20at%2011.38.09%E2%80%AFPM.png)
+
+![Screenshot 10](assets/Screenshot%202026-07-03%20at%2011.38.17%E2%80%AFPM.png)
+
+![Screenshot 11](assets/Screenshot%202026-07-03%20at%2011.38.25%E2%80%AFPM.png)
+
+![Screenshot 12](assets/Screenshot%202026-07-03%20at%2011.38.35%E2%80%AFPM.png)
+
+![Screenshot 13](assets/Screenshot%202026-07-03%20at%2011.38.43%E2%80%AFPM.png)
+
